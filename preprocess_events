@@ -1,0 +1,49 @@
+#!/usr/bin/env python
+
+import argparse
+import csv
+import datetime
+import json
+
+import dateutil.parser
+
+
+def get_year(datestr):
+    """Converts a date, into years in CE or AD, with monts and days
+    converted to decimals. Handles leap years by averaging them out over the
+    non-leap years. Crudely supports BC dates, but does not account for
+    historical calender quirks."""
+
+    # make date more canonical.
+    datestr = datestr.lower().replace("bce", "bc").replace("b.c.", "bc")
+
+    before_0ad = "bc" in datestr
+    parsed_date = dateutil.parser.parse(datestr.replace("bc", ""))
+    year = (parsed_date - datetime.datetime(1, 1, 1)).days / 365.25
+
+    if before_0ad:
+        # The BC suffix was removed, double the year to compensate
+        return year - int(parsed_date.year * 2)
+    else:
+        return year
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Converts a list of events in CSV format, to json format")
+
+    parser.add_argument('in_csv', type=argparse.FileType('r'))
+    parser.add_argument('out_json', type=argparse.FileType('w'))
+
+    args = parser.parse_args()
+    reader = csv.reader(args.in_csv)
+
+    events = [{"year": get_year(row[1]),
+               "event": row[2].strip(),
+               "category": row[0]} for row in reader]
+
+    events = sorted(events, key=lambda event: event['year'])
+    json.dump(events, args.out_json, indent=2, sort_keys=True)
+
+if __name__ == '__main__':
+    main()

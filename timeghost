@@ -1,0 +1,65 @@
+#!/usr/bin/env python
+
+import argparse
+import datetime
+import json
+import random
+
+import twitter
+
+
+def get_tweet(sentences, events):
+    now = datetime.datetime.now()
+    now = now.year + now.month/12.0
+    while True:
+        young = random.choice(events)
+
+        age = now - young['year']
+        treshold = now - 2 * age
+
+        candidates = [e for e in events if e["year"] < treshold]
+        if not candidates:
+            continue
+
+        old = random.choice(candidates[-10:])
+
+        template = random.choice(sentences[young['category']][old['category']])
+
+        tweet = template % {"old": old["event"], "young": young["event"],
+                            "diff": int(young["year"] - old["year"])}
+        # Add years for historic verification
+        # tweet += " %i-%i" % (old['year'], young['year'])
+
+        return tweet
+
+
+def send_tweet(credentials, tweet):
+    api = twitter.Api(**credentials)
+    api.PostUpdate(tweet)
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Produces tweets for timeghost")
+
+    parser.add_argument('--events', type=argparse.FileType('r'),
+                        default="events.json")
+    parser.add_argument('--tweet-creds', type=argparse.FileType('r'))
+    parser.add_argument('--sentence-book', type=argparse.FileType('r'),
+                        default="sentences.json")
+
+    args = parser.parse_args()
+    sentences = json.load(args.sentence_book)
+    events = json.load(args.events)
+
+    tweet = get_tweet(sentences, events)
+
+    if args.tweet_creds:
+        credentials = json.load(args.tweet_creds)
+        send_tweet(credentials, tweet)
+    else:
+        print tweet
+
+
+if __name__ == '__main__':
+    main()
