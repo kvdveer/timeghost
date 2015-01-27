@@ -41,6 +41,7 @@ history,2000,the start of the second intifada
 history,1948,founding of Israel
 history,1950,the start of the Korean war
 history,september 2005,the launch of xkcd
+history,1350,Black Death pike
 invention,14th Oct 1878,lightbulb  
 invention,December 17 1903,airplane
 invention,March 6 1876,telephone
@@ -50,6 +51,7 @@ invention,1440,printing press
 invention,1928,penicilin
 invention,1930,""pill""
 literature,1687,Newton's Principia
+literature,1932,"Brave New World"
 literature,1960,Harper Lee's "To Kill a Mockingbird"
 literature,1979,Douglas Adams' "The Hitchhiker’s Guide to the Galaxy"
 literature,1992,"John Gray's "Men Are from Mars - Women Are from Venus"
@@ -58,9 +60,11 @@ literature,1998,Stephen Hawking’s "A Brief History of Time"
 literature,2003,Dan Brown’s "the Da Vinci Code"
 literature,21 February 1848,Carl Marx' communist manifesto
 literature,380BC,Plato's "The Republic"
-literature,500BC,"the art of war"
+literature,500BC,"The Art of War"
 literature,November 24 1859,Darwin's "The Origin of Species"
-literature,21 September 1937,The hobbit
-literature,June 8 1949,George Orwel's 1984
+literature,21 September 1937,The Hobbit
+literature,June 8 1949,George Orwell's 1984
 movie,November 10 1990,Home alone
 movie,18 December 2001,The first Lord of the Rings movie
+movie,25 May 1977,Star Wars
+movie,15 March 1972,The Godfather
