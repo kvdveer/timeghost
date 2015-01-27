@@ -2,15 +2,15 @@ history,March 28 1979,the Three Mile Island accident
 history,1096,the first crusade
 history,11th Sep 2001,9/11
 history,1985-1991,the Cold War  
-history,1350,Black Death pike
-history,16th Oct 1962,the Cuban Missile Crisis    
+history,1346-1353,Black Death
+history,16th Oct 1962,the Cuban Missile Crisis
 history,1948,the founding of Israel
 history,1950,the start of the Korean war
 history,2 August 1990 - 28 February 1991,the Gulf war
 history,1st Jan 1760,the Industrial Revolution
 history,1st May 1955,the Vietnam war
 history,20 jan 2009,Barack Obama's first day in office
-history,2000,the start of the second intifada
+history,September 28 2000 - February 8 2005,the second intifada
 history,2003,start of the war in Dafur
 history,26th Aug 1883,the eruption of the Krakatoa 
 history,27th Jan 1820,the Discovery of Antarctica
@@ -25,7 +25,6 @@ history,August 9 1945,the atomic bomb on Nagasaki
 history,December 25 1991,the fall of the Soviet Union
 history,December 7 1941,the Pearl Harbor attack
 history,July 14 1789,the French Revolution
-history,July 16 622,the writing of the Quaran
 history,July 20 1969,the moonlanding
 history,July 4 1776,the declaration of Independence
 history,June 19 1815,Napoleon's defeat
@@ -51,6 +50,7 @@ invention,3500bc,wheel
 invention,December 17 1903,airplane
 invention,March 6 1876,telephone
 invention,October 1990,World Wide Web
+literature,July 16 622,the Quran
 literature,1687,Newton's Principia
 literature,1932,"Brave New World"
 literature,1960,Harper Lee's "To Kill a Mockingbird"
@@ -102,3 +102,30 @@ movie,1999,The Green Mile
 movie,2000,Gladiator
 movie,2002,The Pianist
 movie,2010,The King's Speech
+history,1990-1996,Take That's music
+history,1994-2000,Spice Girls' popularity
+history,1994,introduction of the Playstation
+history,2000,introduction of the Playstation II
+history,2004,introduction of the Playstation III
+history,2001,introduction of the XBox
+history,2000,Y2K
+movie,December 10 1993,Doom (the video game)
+movie,May 5 1992,Wolfenstein
+movie,1981,Donkey Kong
+movie,1983,Mario Bros.
+movie,1979,Asteroids
+movie,1972,Pong
+movie,1966-1969,Star Trek: the original series
+movie,1987-1994,Star Trek: The next generation
+movie,1993-1999,Deep Space 9
+movie,1963-1966, William Hartnell as the First Doctor   
+movie,1966-1969, Patrick Troughton as the Second Doctor  
+movie,1970-1974, Jon Pertwee as the Third Doctor   
+movie,1974-1981, Tom Baker as the Fourth Doctor  
+movie,1982-1984, Peter Davison as the Fifth Doctor   
+movie,1984-1986, Colin Baker as the Sixth Doctor   
+movie,1987-1989, Sylvester McCoy as the Seventh Doctor 
+movie,1996, Paul McGann as theEighth Doctor  
+movie,2005,Christopher Eccleston as the Ninth Doctor
+movie,2005-2010, David Tennant as the Tenth Doctor
+movie,2010-2013,Matt Smith as the  Eleventh Doctor
