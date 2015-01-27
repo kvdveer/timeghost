@@ -1,13 +1,17 @@
+history,March 28 1979,the Three Mile Island accident
+history,1096,the first crusade
 history,11th Sep 2001,9/11
 history,12th Mar 1947,the start of the Cold War  
+history,1350,Black Death pike
 history,16th Oct 1962,the Cuban Missile Crisis    
+history,1948,founding of Israel
+history,1950,the start of the Korean war
+history,1990,the start of the Gulf war
 history,1st Jan 1760,the Industrial Revolution
 history,1st May 1955,the Vietnam war
+history,20 jan 2009,Barack Obama's first day in office
+history,2000,the start of the second intifada
 history,2003,start of the war in Dafur
-history, March 28 1979,the Three Mile Island accident
-history,April 26 1986,the Chernobyl meltdown
-history,March 11 2011,the Fukushima disaster
-invention,21st Feb 1885,automobile
 history,26th Aug 1883,the eruption of the Krakatoa 
 history,27th Jan 1820,the Discovery of Antarctica
 history,476,the fall of the Roman empire
@@ -15,6 +19,7 @@ history,8th Mar 1917,the Russian Revolution
 history,April 12 1861,the start of the American Civil War
 history,April 12 1961,the first human in orbit
 history,April 15 1865,Lincoln's assassination
+history,April 26 1986,the Chernobyl meltdown
 history,August 6 1945,the atomic bomb on Heroshima
 history,August 9 1945,the atomic bomb on Nagasaki
 history,December 25 1991,the fall of the Soviet Union
@@ -26,6 +31,7 @@ history,July 4 1776,the declaration of Independence
 history,June 19 1815,Napoleon's defeat
 history,June 23 1914,the start of WW1
 history,June 6 1944,D-Day
+history,March 11 2011,the Fukushima disaster
 history,march 15 44 B.C.,the assasination of Julius Ceasar
 history,May 18 1804,Napoleon's rise
 history,may 528 B.C.,the enlightenment of the Budha
@@ -34,22 +40,16 @@ history,October 12 1492,Columbus' landing in San Salvador
 history,October 29 1929,the Black Tuesday stock market crash
 history,October 31 1517,Martin Luther's 95 theses
 history,September 1 1939,Hitler's invasion of Poland
-history,1096,the first crusade
-history,20 jan 2009,Barack Obama's first day in office
-history,1990,the start of the Gulf war
-history,2000,the start of the second intifada
-history,1948,founding of Israel
-history,1950,the start of the Korean war
 history,september 2005,the launch of xkcd
-history,1350,Black Death pike
+invention,1440,printing press
 invention,14th Oct 1878,lightbulb  
+invention,1928,penicilin
+invention,1930,""pill""
+invention,21st Feb 1885,automobile
+invention,3500bc,wheel
 invention,December 17 1903,airplane
 invention,March 6 1876,telephone
 invention,October 1990,World Wide Web
-invention,3500bc,wheel
-invention,1440,printing press
-invention,1928,penicilin
-invention,1930,""pill""
 literature,1687,Newton's Principia
 literature,1932,"Brave New World"
 literature,1960,Harper Lee's "To Kill a Mockingbird"
@@ -59,12 +59,46 @@ literature,1997,the first Harry Potter book
 literature,1998,Stephen Hawking’s "A Brief History of Time"
 literature,2003,Dan Brown’s "the Da Vinci Code"
 literature,21 February 1848,Carl Marx' communist manifesto
+literature,21 September 1937,The Hobbit
 literature,380BC,Plato's "The Republic"
 literature,500BC,"The Art of War"
-literature,November 24 1859,Darwin's "The Origin of Species"
-literature,21 September 1937,The Hobbit
 literature,June 8 1949,George Orwell's 1984
-movie,November 10 1990,Home alone
+literature,November 24 1859,Darwin's "The Origin of Species"
 movie,18 December 2001,The first Lord of the Rings movie
 movie,25 May 1977,Star Wars
-movie,15 March 1972,The Godfather
+movie,November 10 1990,Home alone
+movie,October 26 1984,Terminator
+movie,June 12 1981,Raiders of the Lost Ark
+movie,1971,A Clockwork Orange
+movie,1971,The French Connection
+movie,1972,The Godfather
+movie,1973,American Graffiti
+movie,1973,The Exorcist
+movie,1975,Jaws
+movie,1975,One Flew Over the Cuckoo's Nest
+movie,1976,Rocky
+movie,1976,Taxi Driver
+movie,1977,Annie Hall
+movie,1977,Close Encounters of the Third Kind
+movie,1978,The Deer Hunter
+movie,1979,Apocalypse Now
+movie,1980,Raging Bull
+movie,1982,E.T.
+movie,1983,Terms of Endearment
+movie,1986,Platoon
+movie,1988,Rain Man
+movie,1990,Dances with Wolves
+movie,1990,Goodfellas
+movie,1991,The Silence of the Lambs
+movie,1993,Schindler's List
+movie,1994,Forrest Gump
+movie,1994,Pulp Fiction
+movie,1994,The Shawshank Redemption
+movie,1995,Braveheart
+movie,1997,Good Will Hunting
+movie,1997,Titanic
+movie,1998,Saving Private Ryan
+movie,1999,The Green Mile
+movie,2000,Gladiator
+movie,2002,The Pianist
+movie,2010,The King's Speech
