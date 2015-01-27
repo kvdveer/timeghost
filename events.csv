@@ -1,12 +1,12 @@
 history,March 28 1979,the Three Mile Island accident
 history,1096,the first crusade
 history,11th Sep 2001,9/11
-history,12th Mar 1947,the start of the Cold War  
+history,1985-1991,the Cold War  
 history,1350,Black Death pike
 history,16th Oct 1962,the Cuban Missile Crisis    
-history,1948,founding of Israel
+history,1948,the founding of Israel
 history,1950,the start of the Korean war
-history,1990,the start of the Gulf war
+history,2 August 1990 - 28 February 1991,the Gulf war
 history,1st Jan 1760,the Industrial Revolution
 history,1st May 1955,the Vietnam war
 history,20 jan 2009,Barack Obama's first day in office
@@ -16,7 +16,7 @@ history,26th Aug 1883,the eruption of the Krakatoa
 history,27th Jan 1820,the Discovery of Antarctica
 history,476,the fall of the Roman empire
 history,8th Mar 1917,the Russian Revolution  
-history,April 12 1861,the start of the American Civil War
+history,April 12 1861- May 9 1865,the American Civil War
 history,April 12 1961,the first human in orbit
 history,April 15 1865,Lincoln's assassination
 history,April 26 1986,the Chernobyl meltdown
@@ -29,7 +29,8 @@ history,July 16 622,the writing of the Quaran
 history,July 20 1969,the moonlanding
 history,July 4 1776,the declaration of Independence
 history,June 19 1815,Napoleon's defeat
-history,June 23 1914,the start of WW1
+history,28 July 1914 - 11 November 1918,WW1
+history,1 September 1939 - 2 September 1945,WW2
 history,June 6 1944,D-Day
 history,March 11 2011,the Fukushima disaster
 history,march 15 44 B.C.,the assasination of Julius Ceasar
@@ -39,8 +40,8 @@ history,November 1989,the fall of the Berlin Wall
 history,October 12 1492,Columbus' landing in San Salvador
 history,October 29 1929,the Black Tuesday stock market crash
 history,October 31 1517,Martin Luther's 95 theses
-history,September 1 1939,Hitler's invasion of Poland
 history,september 2005,the launch of xkcd
+history,January 20 2001 - January 20 2009,George W. Bush's presidency
 invention,1440,printing press
 invention,14th Oct 1878,lightbulb  
 invention,1928,penicilin
@@ -75,11 +76,10 @@ movie,1972,The Godfather
 movie,1973,American Graffiti
 movie,1973,The Exorcist
 movie,1975,Jaws
-movie,1975,One Flew Over the Cuckoo's Nest
 movie,1976,Rocky
 movie,1976,Taxi Driver
 movie,1977,Annie Hall
-movie,1977,Close Encounters of the Third Kind
+movie,1977,Close Encounters of the 3rd Kind
 movie,1978,The Deer Hunter
 movie,1979,Apocalypse Now
 movie,1980,Raging Bull

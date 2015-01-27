@@ -8,7 +8,7 @@ import json
 import dateutil.parser
 
 
-def get_year(datestr):
+def get_year(datestr, find_end=True):
     """Converts a date, into years in CE or AD, with monts and days
     converted to decimals. Handles leap years by averaging them out over the
     non-leap years. Crudely supports BC dates, but does not account for
@@ -17,8 +17,12 @@ def get_year(datestr):
     # make date more canonical.
     datestr = datestr.lower().replace("bce", "bc").replace("b.c.", "bc")
 
+    default_date = (datetime.datetime(2000, 12, 30) if find_end
+                    else datetime.datetime(2000, 1, 1))
+
     before_0ad = "bc" in datestr
-    parsed_date = dateutil.parser.parse(datestr.replace("bc", ""))
+    parsed_date = dateutil.parser.parse(datestr.replace("bc", ""),
+                                        default=default_date)
     year = (parsed_date - datetime.datetime(1, 1, 1)).days / 365.25
 
     if before_0ad:
@@ -32,18 +36,28 @@ def main():
     parser = argparse.ArgumentParser(
         description="Converts a list of events in CSV format, to json format")
 
-    parser.add_argument('in_csv', type=argparse.FileType('r'))
-    parser.add_argument('out_json', type=argparse.FileType('w'))
+    parser.add_argument('in_csv', type=argparse.FileType('r'), nargs="+")
+    parser.add_argument('--out', type=argparse.FileType('w'))
+
+    events = []
 
     args = parser.parse_args()
-    reader = csv.reader(args.in_csv)
+    for handle in args.in_csv:
+        reader = csv.reader(handle)
+        for row in reader:
+            if "-" in row[1]:
+                start, end = row[1].split("-", 1)
+            else:
+                start = end = row[1]
 
-    events = [{"year": get_year(row[1]),
-               "event": row[2].strip(),
-               "category": row[0]} for row in reader]
+            events.append({
+                "start": get_year(start, False),
+                "end": get_year(end, True),
+                "event": row[2].strip(),
+                "category": row[0]})
 
-    events = sorted(events, key=lambda event: event['year'])
-    json.dump(events, args.out_json, indent=2, sort_keys=True)
+    events = sorted(events, key=lambda event: event['start'])
+    json.dump(events, args.out, indent=2, sort_keys=True)
 
 if __name__ == '__main__':
     main()

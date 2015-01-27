@@ -14,21 +14,21 @@ def get_tweet(sentences, events):
     while True:
         young = random.choice(events)
 
-        age = now - young['year']
+        age = now - young['start']
         treshold = now - 2 * age
 
-        candidates = [e for e in events if e["year"] < treshold]
+        candidates = [e for e in events if treshold < e["end"] < young['start']]
         if not candidates:
             continue
 
-        old = random.choice(candidates[-10:])
+        old = random.choice(candidates[:5])
 
         template = random.choice(sentences[young['category']][old['category']])
 
         tweet = template % {"old": old["event"], "young": young["event"],
-                            "diff": int(young["year"] - old["year"])}
+                            "diff": int(young["start"] - old["end"])}
         # Add years for historic verification
-        # tweet += " %i-%i" % (old['year'], young['year'])
+        # tweet += " %i-%i" % (old['end'], young['start'])
 
         return tweet
 
