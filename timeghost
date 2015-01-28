@@ -2,10 +2,59 @@
 
 import argparse
 import datetime
+import itertools
 import json
 import random
 
 import twitter
+
+
+transformations = {
+    "history": [],
+    "action": [],
+    "war": [
+        ("%s ended", "action", "old"),
+        ("%s started", "action", "young"),
+        ("the start of %s", "history", "old"),
+        ("the end of %s", "history", "young")
+    ],
+    "series": [
+        ("%s ended", "action", "old"),
+        ("%s first aired", "action", "young"),
+        ("the last episode of %s", "history", "old"),
+        ("the conclusion of %s", "history", "young")
+    ],
+    "literature": [
+        ("%s was published", "action"),
+        ("the publication of %s", "history"),
+    ],
+    "movie": [
+        ("%s was released", "action"),
+        ("the release of %s", "history"),
+    ],
+    "invention": [
+        ("the %s was invented", "action"),
+        ("the invention of the %s", "history"),
+    ],
+    "game": [
+        ("%s was released", "action"),
+        ("the release of %s", "history"),
+    ],
+}
+
+
+def transform_event(event, kind):
+    events = [event]
+
+    for transformation in transformations[event['category']]:
+        if len(transformation) == 3 and transformation[2] != kind:
+            continue
+        new_event = dict(event)
+        new_event.update({"category": transformation[1],
+                          "event": transformation[0] % event["event"]})
+        events.append(new_event)
+
+    return events
 
 
 def get_tweet(sentences, events):
@@ -17,19 +66,23 @@ def get_tweet(sentences, events):
         age = now - young['start']
         treshold = now - 2 * age
 
-        candidates = [e for e in events if treshold < e["end"] < young['start']]
+        candidates = [e for e in events
+                      if treshold < e["end"] < young['start']]
         if not candidates:
             continue
 
         old = random.choice(candidates[:5])
 
-        template = random.choice(sentences[young['category']][old['category']])
-
+        for young, old in itertools.product(transform_event(young, "young"),
+                                            transform_event(old, "old")):
+            try:
+                candidates = sentences[young['category']][old['category']]
+                template = random.choice(candidates)
+                break
+            except KeyError:
+                pass
         tweet = template % {"old": old["event"], "young": young["event"],
                             "diff": int(young["start"] - old["end"])}
-        # Add years for historic verification
-        # tweet += " %i-%i" % (old['end'], young['start'])
-
         return tweet
 
 

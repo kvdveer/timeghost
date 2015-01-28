@@ -1,69 +1,24 @@
 {
+  "action": {
+    "action": [
+      "%(young)s longer ago than when %(old)s at the time",
+      "When %(young)s, %(old)s just %(diff)i years ago"
+    ],
+    "history": [
+      "%(young)s longer ago than %(old)s at the time",
+      "%(young)s closer to %(old)s than to present day",
+      "When %(young)s, %(old)s happened just %(diff)i years ago",
+      "%(young)s just %(diff)s years after %(old)s"
+    ]
+  },
   "history": {
     "history": [
-      "%(young)s is longer ago than %(old)s was at the time",
+      "%(young)s happened longer ago than %(old)s was at the time",
       "%(young)s happened closer to %(old)s than to present day"
     ],
-    "invention": [
-      "%(young)s happened closer to the invention of %(old)s than to present day",
-      "when %(young)s happend, the %(old)s was already %(diff)i years old"
-    ],
-    "literature": [
-      "%(young)s is further away than the publication of %(old)s at the time",
-      "when %(young)s happend, %(old)s was already %(diff)i years old"
-    ],
-    "movie": [
-      "%(young)s is further away than the release of %(old)s at the time",
-      "when %(young)s happend, %(old)s was already %(diff)i years old"
-    ]
-  },
-  "invention": {
-    "history": [
-      "The %(young)s was invented closer to %(old)s than to present day"
-    ],
-    "invention": [
-      "The %(young)s was invented closer to %(old)s than to present day",
-      "The %(young)s and the %(old)s were invented closer together than to present day"
-    ],
-    "literature": [
-      "When the %(young)s was invented, %(old)s was already %(diff)i years old"
-    ],
-    "movie": [
-      "When the %(young)s was invented, %(old)s was already %(diff)i years old"
-    ]
-  },
-  "literature": {
-    "history": [
-      "%(young)s was published closer to %(old)s than to present day"
-    ],
-    "invention": [
-      "%(young)s and the invention of %(old)s are closer to each other than to present day",
-      "when %(young)s was published, the %(old)s was already around for %(diff)i years"
-    ],
-    "literature": [
-      "%(old)s and %(young)s were published closer to each other than to present day",
-      "%(old)s and %(young)s differ by %(diff)i years"
-    ],
-    "movie": [
-      "%(old)s was published as far away than %(young)s was at the time",
-      "when %(young)s was published, %(old)s was already %(diff)i years old"
-    ]
-  },
-  "movie": {
-    "history": [
-      "%(young)s was released closer to %(old)s than to present day"
-    ],
-    "invention": [
-      "%(young)s was released closer to the invention of %(old)s than to present day",
-      "when %(young)s was released, the %(old)s was already around for %(diff)i years"
-    ],
-    "literature": [
-      "The release of %(young)s is further away than %(old)s was at the time",
-      "when %(young)s was released, %(old)s was already %(diff)i years old"
-    ],
-    "movie": [
-      "%(young)s and %(old)s were released closer closer together than to present day",
-      "when %(young)s was released, %(old)s was already %(diff)i years old"
-    ]
+    "action": [
+      "After %(old)s, it took just %(diff)i years until %(young)s",
+      "when %(young)s happened, %(old)s just %(diff)i years ago"
+    ] 
   }
 }
